@@ -1,0 +1,32 @@
+{
+  "/": {
+    "reference": "reference/01-home-reference.png",
+    "primaryImage": "/images/webp/home-hero.webp",
+    "layout": "full-viewport editorial hero; selected projects below fold"
+  },
+  "/projects": {
+    "reference": "reference/02-projects-reference.png",
+    "layout": "two-column project grid on desktop; one column on mobile"
+  },
+  "/studio": {
+    "reference": "reference/03-studio-reference.png",
+    "primaryImage": "/images/webp/studio-philosophy.webp",
+    "layout": "text left; portrait image right"
+  },
+  "/services": {
+    "primaryImage": "/images/webp/project-atelier-04.webp",
+    "layout": "numbered editorial list and large image"
+  },
+  "/journal": {
+    "layout": "three editorial articles using local images only"
+  },
+  "/contact": {
+    "reference": "reference/04-contact-reference.png",
+    "primaryImage": "/images/webp/contact-dining.webp",
+    "layout": "large headline left; wide image right"
+  },
+  "/projects/riverside-apartment": {
+    "primaryImage": "/images/webp/project-riverside.webp",
+    "layout": "project title, metadata and large image sequence"
+  }
+}

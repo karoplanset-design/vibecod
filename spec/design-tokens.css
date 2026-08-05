@@ -1,0 +1,22 @@
+:root {
+  --color-bg: #f2f0ec;
+  --color-bg-soft: #e9e6df;
+  --color-text: #171717;
+  --color-text-inverse: #f5f2ec;
+  --color-line: rgba(23, 23, 23, 0.18);
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Manrope", Arial, sans-serif;
+
+  --page-padding-desktop: clamp(32px, 4vw, 72px);
+  --page-padding-mobile: 20px;
+  --header-height: 104px;
+  --content-max-width: 1600px;
+
+  --display-xl: clamp(64px, 6.2vw, 118px);
+  --display-lg: clamp(52px, 5vw, 92px);
+  --heading-md: clamp(32px, 3vw, 54px);
+  --body-md: clamp(15px, 1vw, 18px);
+
+  --ease-editorial: cubic-bezier(.22, 1, .36, 1);
+}

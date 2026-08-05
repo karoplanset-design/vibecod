@@ -1,0 +1,58 @@
+{
+  "home-hero": {
+    "recommended_path": "/images/webp/home-hero.webp",
+    "original_path": "/images/original/home-hero.png",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "project-riverside": {
+    "recommended_path": "/images/webp/project-riverside.webp",
+    "original_path": "/images/original/project-riverside.png",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "project-forest-house": {
+    "recommended_path": "/images/webp/project-forest-house.webp",
+    "original_path": "/images/original/project-forest-house.png",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "project-mono-residence": {
+    "recommended_path": "/images/webp/project-mono-residence.webp",
+    "original_path": "/images/original/project-mono-residence.png",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "project-atelier-04": {
+    "recommended_path": "/images/webp/project-atelier-04.webp",
+    "original_path": "/images/original/project-atelier-04.png",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  },
+  "studio-philosophy": {
+    "recommended_path": "/images/webp/studio-philosophy.webp",
+    "original_path": "/images/original/studio-philosophy.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    }
+  },
+  "contact-dining": {
+    "recommended_path": "/images/webp/contact-dining.webp",
+    "original_path": "/images/original/contact-dining.png",
+    "dimensions": {
+      "width": 1448,
+      "height": 1086
+    }
+  }
+}
