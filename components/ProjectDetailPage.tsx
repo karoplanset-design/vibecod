@@ -19,6 +19,16 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
   const currentIndex = siteContent.projectDetails.findIndex((item) => item.slug === slug);
   const previous = siteContent.projectDetails[(currentIndex - 1 + siteContent.projectDetails.length) % siteContent.projectDetails.length];
   const next = siteContent.projectDetails[(currentIndex + 1) % siteContent.projectDetails.length];
+  const imageAlts = slug === "atelier-04"
+    ? [
+        "Atelier 04 living room",
+        "Atelier 04 kitchen",
+        "Atelier 04 dining room",
+        "Atelier 04 bedroom",
+        "Atelier 04 hallway",
+        "Atelier 04 bathroom",
+      ]
+    : project.images.map((_, index) => `${project.title}: view ${index + 1}`);
 
   return (
     <main className={styles.page}>
@@ -37,7 +47,7 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
       <div className={`${styles.container} ${styles.detailHeroWrap}`}>
         <ZoomableImage
           src={project.images[0]}
-          alt={`${project.title}: главный интерьер`}
+          alt={imageAlts[0]}
           imageClassName={styles.detailImage}
           sizes="100vw"
           priority
@@ -54,7 +64,7 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
           <div className={styles.galleryImageWrap}>
             <ZoomableImage
               src={project.images[1]}
-              alt={`${project.title}: интерьер, вид 2`}
+              alt={imageAlts[1]}
               imageClassName={styles.detailImage}
               sizes="90vw"
             />
@@ -72,12 +82,27 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
             <div className={styles.galleryFeatureImage}>
               <ZoomableImage
                 src={project.images[2]}
-                alt={`${project.title}: интерьер, вид 3`}
+                alt={imageAlts[2]}
                 imageClassName={styles.detailImage}
                 sizes="(max-width: 760px) 100vw, 68vw"
               />
             </div>
           </section>
+
+          {slug === "atelier-04" ? (
+            <>
+              {[3, 4, 5].map((imageIndex) => (
+                <div className={styles.galleryImageWrap} key={project.images[imageIndex]}>
+                  <ZoomableImage
+                    src={project.images[imageIndex]}
+                    alt={imageAlts[imageIndex]}
+                    imageClassName={styles.detailImage}
+                    sizes="(max-width: 760px) 100vw, 90vw"
+                  />
+                </div>
+              ))}
+            </>
+          ) : null}
         </div>
 
         <nav className={styles.projectNav} aria-label="Навигация по проектам">
