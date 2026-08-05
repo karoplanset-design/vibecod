@@ -162,9 +162,12 @@
       "galleryTitle": "Точность деталей",
       "galleryNote": "Единый ритм фасадов, света и мебели делает небольшое пространство визуально свободнее.",
       "images": [
-        "/images/webp/project-atelier-04.webp",
-        "/images/webp/project-riverside.webp",
-        "/images/webp/project-forest-house.webp"
+        "/images/projects/atelier-04/atelier-living-room.png",
+        "/images/projects/atelier-04/atelier-kitchen.png",
+        "/images/projects/atelier-04/atelier-dining-room.png",
+        "/images/projects/atelier-04/atelier-bedroom.png",
+        "/images/projects/atelier-04/atelier-hallway.png",
+        "/images/projects/atelier-04/atelier-bathroom.png"
       ]
     }
   ],
