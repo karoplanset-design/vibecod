@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageIntro } from "@/components/PageIntro";
 import { siteContent } from "@/app/lib/content";
+import { siteImageMap } from "@/data/projectImageMap";
 import styles from "@/app/site.module.css";
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export default function ServicesPage() {
           <div className={styles.serviceImageWrap}>
             <Image
               className={styles.serviceImage}
-              src="/images/webp/project-atelier-04.webp"
+              src={siteImageMap.services}
               alt="Лаконичный интерьер кухни и материальная палитра delent"
               fill
               unoptimized

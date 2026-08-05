@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageIntro } from "@/components/PageIntro";
 import { ProjectCard } from "@/components/ProjectCard";
 import { siteContent } from "@/app/lib/content";
+import { getProjectImages } from "@/data/projectImageMap";
 import styles from "@/app/site.module.css";
 
 export const metadata: Metadata = {
@@ -15,9 +16,17 @@ export default function ProjectsPage() {
       <div className={styles.container}>
         <PageIntro title="Проекты" eyebrow="Избранные работы · 2023—2024" />
         <div className={`${styles.projectGrid} ${styles.projectsPageGrid}`}>
-          {siteContent.projects.map((project) => (
-            <ProjectCard project={project} key={project.title} />
-          ))}
+          {siteContent.projects.map((project) => {
+            const images = getProjectImages(project.slug);
+            return (
+              <ProjectCard
+                project={project}
+                image={images.previewImage}
+                imageAlt={images.previewAlt}
+                key={project.title}
+              />
+            );
+          })}
         </div>
       </div>
     </main>

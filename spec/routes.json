@@ -1,7 +1,7 @@
 {
   "/": {
     "reference": "reference/01-home-reference.png",
-    "primaryImage": "/images/webp/home-hero.webp",
+    "primaryImageKey": "home-hero",
     "layout": "full-viewport editorial hero; selected projects below fold"
   },
   "/projects": {
@@ -10,11 +10,11 @@
   },
   "/studio": {
     "reference": "reference/03-studio-reference.png",
-    "primaryImage": "/images/webp/studio-philosophy.webp",
+    "primaryImageKey": "studio-philosophy",
     "layout": "text left; portrait image right"
   },
   "/services": {
-    "primaryImage": "/images/webp/project-atelier-04.webp",
+    "primaryImageKey": "project-atelier-04",
     "layout": "numbered editorial list and large image"
   },
   "/journal": {
@@ -22,11 +22,11 @@
   },
   "/contact": {
     "reference": "reference/04-contact-reference.png",
-    "primaryImage": "/images/webp/contact-dining.webp",
+    "primaryImageKey": "contact-dining",
     "layout": "large headline left; wide image right"
   },
   "/projects/riverside-apartment": {
-    "primaryImage": "/images/webp/project-riverside.webp",
+    "primaryImageKey": "project-riverside",
     "layout": "project title, metadata and large image sequence"
   }
 }

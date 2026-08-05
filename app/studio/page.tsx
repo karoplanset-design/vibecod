@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { siteContent } from "@/app/lib/content";
+import { siteImageMap } from "@/data/projectImageMap";
 import styles from "@/app/site.module.css";
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export default function StudioPage() {
         <div className={styles.studioImageWrap}>
           <Image
             className={styles.studioImage}
-            src="/images/webp/studio-philosophy.webp"
+            src={siteImageMap.studio}
             alt="Натуральные материалы и скульптурные объекты в студии delent"
             fill
             unoptimized

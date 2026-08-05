@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { siteContent } from "@/app/lib/content";
+import { siteImageMap } from "@/data/projectImageMap";
 import styles from "@/app/site.module.css";
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ export default function ContactPage() {
         <div className={styles.contactImageWrap}>
           <Image
             className={styles.contactImage}
-            src="/images/webp/contact-dining.webp"
+            src={siteImageMap.contact}
             alt="Столовая с натуральным деревом и мягким светом"
             fill
             unoptimized

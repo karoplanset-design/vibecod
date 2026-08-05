@@ -5,16 +5,18 @@ import styles from "./components.module.css";
 
 type ProjectCardProps = {
   project: Project;
+  image: string;
+  imageAlt: string;
 };
 
-function CardContent({ project }: { project: Project }) {
+function CardContent({ project, image, imageAlt }: ProjectCardProps) {
   return (
     <>
       <div className={styles.projectImageWrap}>
         <Image
           className={styles.projectImage}
-          src={project.image}
-          alt={`${project.title}, ${project.location}`}
+          src={image}
+          alt={imageAlt}
           fill
           unoptimized
           sizes="(max-width: 760px) 100vw, 50vw"
@@ -29,10 +31,10 @@ function CardContent({ project }: { project: Project }) {
   );
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, image, imageAlt }: ProjectCardProps) {
   return (
     <Link className={styles.projectCard} href={`/projects/${project.slug}`} aria-label={`Открыть проект «${project.title}»`}>
-      <CardContent project={project} />
+      <CardContent project={project} image={image} imageAlt={imageAlt} />
     </Link>
   );
 }

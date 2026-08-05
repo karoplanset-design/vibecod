@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageIntro } from "@/components/PageIntro";
 import { ZoomableImage } from "@/components/ZoomableImage";
 import { siteContent } from "@/app/lib/content";
+import { siteImageMap } from "@/data/projectImageMap";
 import styles from "@/app/site.module.css";
 
 export const metadata: Metadata = {
@@ -15,11 +16,11 @@ export default function JournalPage() {
       <div className={styles.container}>
         <PageIntro title="Журнал" eyebrow="Идеи, материалы, процесс" />
         <div className={styles.journalGrid}>
-          {siteContent.journal.map((article) => (
+          {siteContent.journal.map((article, index) => (
             <article className={styles.journalArticle} key={article.title}>
               <div className={styles.articleImageWrap}>
                 <ZoomableImage
-                  src={article.image}
+                  src={siteImageMap.journal[index]}
                   alt={article.title}
                   imageClassName={styles.articleImage}
                   sizes="(max-width: 760px) 100vw, 33vw"

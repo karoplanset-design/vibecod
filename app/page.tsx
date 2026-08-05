@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectCard } from "@/components/ProjectCard";
+import { getProjectImages, siteImageMap } from "@/data/projectImageMap";
 import { siteContent } from "./lib/content";
 import styles from "./site.module.css";
 
@@ -10,7 +11,7 @@ export default function Home() {
       <section className={styles.homeHero}>
         <Image
           className={styles.heroImage}
-          src="/images/webp/home-hero.webp"
+          src={siteImageMap.homeHero}
           alt="Современная гостиная в тёплых оттенках, проект delent"
           fill
           unoptimized
@@ -35,9 +36,17 @@ export default function Home() {
             <Link className={styles.viewAll} href="/projects">Все проекты →</Link>
           </div>
           <div className={styles.projectGrid}>
-            {siteContent.projects.map((project) => (
-              <ProjectCard project={project} key={project.title} />
-            ))}
+            {siteContent.projects.map((project) => {
+              const images = getProjectImages(project.slug);
+              return (
+                <ProjectCard
+                  project={project}
+                  image={images.homePreviewImage}
+                  imageAlt={images.homePreviewAlt}
+                  key={project.title}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
