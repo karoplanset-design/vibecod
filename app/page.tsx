@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { ProjectCard } from "@/components/ProjectCard";
 import { getProjectImages, siteImageMap } from "@/data/projectImageMap";
 import { siteContent } from "./lib/content";
@@ -9,14 +9,11 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <section className={styles.homeHero}>
-        <Image
-          className={styles.heroImage}
-          src={siteImageMap.homeHero}
-          alt="Современная гостиная в тёплых оттенках, проект delent"
-          fill
-          unoptimized
-          priority
-          sizes="100vw"
+        <BeforeAfterSlider
+          beforeSrc={siteImageMap.homeHeroBefore}
+          afterSrc={siteImageMap.homeHeroAfter}
+          beforeAlt="Гостиная до ремонта"
+          afterAlt="Гостиная после ремонта"
         />
         <div className={styles.heroInner}>
           <h1 className={styles.heroTitle}>{siteContent.home.title}</h1>
