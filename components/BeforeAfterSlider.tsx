@@ -102,8 +102,8 @@ export function BeforeAfterSlider({
         />
       </div>
 
-      <span className={`${styles.label} ${styles.beforeLabel}`}>До</span>
-      <span className={`${styles.label} ${styles.afterLabel}`}>После</span>
+      <span className={`${styles.label} ${styles.beforeLabel}`}>До изменений</span>
+      <span className={`${styles.label} ${styles.afterLabel}`}>После изменений</span>
 
       <div className={styles.divider} aria-hidden="true">
         <button
@@ -117,7 +117,11 @@ export function BeforeAfterSlider({
           aria-valuetext={`${Math.round(position)}% после`}
           onKeyDown={adjustWithKeyboard}
         >
-          <span aria-hidden="true">↔</span>
+          <span className={styles.handleIcon} aria-hidden="true">
+            <span>‹</span>
+            <span className={styles.handleDot} />
+            <span>›</span>
+          </span>
         </button>
       </div>
     </div>

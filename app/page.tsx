@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -9,11 +10,14 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <section className={styles.homeHero}>
-        <BeforeAfterSlider
-          beforeSrc={siteImageMap.homeHeroBefore}
-          afterSrc={siteImageMap.homeHeroAfter}
-          beforeAlt="Гостиная до ремонта"
-          afterAlt="Гостиная после ремонта"
+        <Image
+          className={styles.heroImage}
+          src={siteImageMap.homeHero}
+          alt="Современная гостиная в тёплых оттенках, проект delent"
+          fill
+          unoptimized
+          priority
+          sizes="100vw"
         />
         <div className={styles.heroInner}>
           <h1 className={styles.heroTitle}>{siteContent.home.title}</h1>
@@ -21,6 +25,15 @@ export default function Home() {
             {siteContent.home.cta}
           </Link>
         </div>
+      </section>
+
+      <section className={styles.comparisonSection}>
+        <BeforeAfterSlider
+          beforeSrc={siteImageMap.homeComparisonBefore}
+          afterSrc={siteImageMap.homeComparisonAfter}
+          beforeAlt="Гостиная до ремонта"
+          afterAlt="Гостиная после ремонта"
+        />
       </section>
 
       <section className={styles.selectedSection}>

@@ -30,14 +30,18 @@
 
 .label {
   position: absolute;
-  top: 22px;
+  bottom: 22px;
   z-index: 3;
-  padding: 7px 10px;
-  color: var(--color-text-inverse);
-  background: rgba(23, 23, 23, 0.38);
-  font-size: 0.6rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  padding: 8px 13px 9px;
+  border: 1px solid rgba(245, 242, 236, 0.52);
+  color: var(--color-text);
+  background: rgba(242, 240, 236, 0.84);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 1.35vw, 1.2rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
   pointer-events: none;
 }
 
@@ -55,8 +59,9 @@
   bottom: 0;
   left: var(--position);
   z-index: 4;
-  width: 1px;
-  background: rgba(245, 242, 236, 0.95);
+  width: 2px;
+  background: linear-gradient(180deg, rgba(245, 242, 236, 0.65), #f5f2ec 48%, rgba(245, 242, 236, 0.65));
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
   transform: translateX(-50%);
   pointer-events: none;
 }
@@ -65,21 +70,44 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 48px;
-  height: 48px;
+  width: 66px;
+  height: 44px;
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1px solid rgba(245, 242, 236, 0.92);
-  border-radius: 50%;
-  color: var(--color-text-inverse);
-  background: rgba(23, 23, 23, 0.54);
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
-  font-size: 1.1rem;
+  border: 1px solid rgba(23, 23, 23, 0.16);
+  border-radius: 999px;
+  color: var(--color-text);
+  background: rgba(242, 240, 236, 0.92);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+  font-family: var(--font-body);
+  font-size: 1rem;
   line-height: 1;
   cursor: ew-resize;
   transform: translate(-50%, -50%);
   pointer-events: auto;
+}
+
+.handleIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  transform: translateY(-1px);
+}
+
+.handleIcon > span:first-child,
+.handleIcon > span:last-child {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.handleDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.55;
 }
 
 .handle:focus-visible {
@@ -89,9 +117,8 @@
 
 @media (max-width: 700px) {
   .label {
-    top: 14px;
-    padding: 6px 8px;
-    font-size: 0.55rem;
+    bottom: 14px;
+    padding: 7px 10px 8px;
   }
 
   .beforeLabel {
@@ -103,7 +130,7 @@
   }
 
   .handle {
-    width: 44px;
-    height: 44px;
+    width: 58px;
+    height: 40px;
   }
 }

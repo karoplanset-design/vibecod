@@ -1,8 +1,9 @@
 import assetMap from "@/spec/asset-map.json";
 
 const IMAGE_ASSETS = {
-  homeHeroBefore: "/images/hero/before.png",
-  homeHeroAfter: "/images/hero/after.png",
+  homeHero: assetMap["home-hero"].recommended_path,
+  homeComparisonBefore: "/images/hero/after.png",
+  homeComparisonAfter: "/images/hero/before.png",
   riversideHomePreview: assetMap["project-riverside"].recommended_path,
   riversideHero: assetMap["contact-dining"].recommended_path,
   forestHomePreview: assetMap["project-forest-house"].recommended_path,
@@ -34,8 +35,9 @@ const IMAGE_ASSETS = {
 } as const;
 
 export const siteImageMap = {
-  homeHeroBefore: IMAGE_ASSETS.homeHeroBefore,
-  homeHeroAfter: IMAGE_ASSETS.homeHeroAfter,
+  homeHero: IMAGE_ASSETS.homeHero,
+  homeComparisonBefore: IMAGE_ASSETS.homeComparisonBefore,
+  homeComparisonAfter: IMAGE_ASSETS.homeComparisonAfter,
   studio: IMAGE_ASSETS.studio,
   services: IMAGE_ASSETS.services,
   contact: IMAGE_ASSETS.contact,

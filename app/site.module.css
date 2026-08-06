@@ -70,6 +70,12 @@
   align-items: flex-start;
 }
 
+.comparisonSection {
+  width: min(100%, var(--content-max-width));
+  margin: 0 auto;
+  padding: clamp(30px, 4vw, 64px) var(--page-padding) clamp(72px, 9vw, 140px);
+}
+
 .heroTitle {
   max-width: 10.5ch;
   margin: 0;
